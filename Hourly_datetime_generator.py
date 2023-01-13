@@ -15,7 +15,7 @@ datetime_str =[str(x)[:13] for x in Hourly_datetime_generator(Begin_Date, End_Da
 print(datetime_str)
 
 # =============== Alternatively, Try ! =============== #
-
+import pandas as pd
 datetime_str= [str(d)[:13] for d in pd.date_range(start=Begin_Date,end=End_Date, freq='1H' )]
 print(datetime_str)
 
