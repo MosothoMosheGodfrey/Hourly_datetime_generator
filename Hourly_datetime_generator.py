@@ -12,5 +12,12 @@ def Hourly_datetime_generator(Begin_Date, End_Date):
         Begin_Date = Begin_Date + timedelta(hours=1)
 # Convert list to string...
 datetime_str =[str(x)[:13] for x in Hourly_datetime_generator(Begin_Date, End_Date)]
+print(datetime_str)
 
+
+
+
+# =============== Alternatively, Try ! =============== #
+
+datetime_str= [str(d)[:13] for d in pd.date_range(start=Begin_Date,end=End_Date, freq='1H' )]
 print(datetime_str)
